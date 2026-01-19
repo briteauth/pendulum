@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Temporal Authentication System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="terminal">
+    <div class="terminal-header">
+      <div class="terminal-controls">
+        <span class="control"></span>
+        <span class="control"></span>
+        <span class="control"></span>
+      </div>
+      <div class="terminal-title">Temporal Authentication System</div>
+    </div>
+    
+    <div class="terminal-body">
+      <h1 class="title">
+        <span>TAS</span>
+        <div class="subtitle">Neural Pattern Recognition System</div>
+      </h1>
+
+      <div class="mode-selector">
+        <div class="mode-toggle">
+          <input type="radio" name="mode" value="login" id="login" checked />
+          <label for="login" class="mode-btn">
+            <span>ACCESS</span>
+          </label>
+          
+          <input type="radio" name="mode" value="register" id="register" />
+          <label for="register" class="mode-btn">
+            <span>REGISTER</span>
+          </label>
+        </div>
+      </div>
+
+      <form id="authForm" class="auth-form">
+        <div class="input-group">
+          <div class="input-wrapper">
+            <input id="username" type="text" placeholder="" required />
+            <label class="floating-label">USER_ID</label>
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <div class="input-row">
+            <div class="input-wrapper password-container">
+              <input id="password" type="password" placeholder="" required autocomplete="new-password" />
+              <label class="floating-label">NEURAL_KEY</label>
+              <div class="timer-display">
+                <span class="timer-label">TEMPORAL_SYNC</span>
+                <span id="timer" class="timer">0.000s</span>
+              </div>
+            </div>
+            <button type="button" class="toggle-btn" id="togglePassword" title="Toggle Visibility">SHOW</button>
+          </div>
+        </div>
+        
+        <div class="input-group" id="confirmGroup" style="display: none;">
+          <div class="input-row">
+            <div class="input-wrapper password-container">
+              <input id="confirmPassword" type="password" placeholder="" required />
+              <label class="floating-label">CONFIRM_KEY</label>
+              <div class="timer-display">
+                <span class="timer-label">TEMPORAL_SYNC</span>
+                <span id="confirmTimer" class="timer">0.000s</span>
+              </div>
+            </div>
+            <button type="button" class="toggle-btn" id="toggleConfirmPassword" title="Toggle Visibility">SHOW</button>
+          </div>
+        </div>
+        
+        <div class="retry-container">
+          <button id="retryBtn" type="button" class="retry-btn" title="Reset Timing">
+            RETRY
+          </button>
+        </div>
+        
+        <button id="submitBtn" type="submit" class="cyber-btn">
+          <span class="btn-text">EXECUTE</span>
+        </button>
+      </form>
+      
+      <div id="passwordDisplay" class="password-display" style="display: none;">
+        <div class="display-title">PASSWORD ANALYSIS</div>
+        <div class="password-text" id="displayedPassword"></div>
+        <div class="timing-graph" id="timingGraph"></div>
+      </div>
+
+      <div class="status-panel">
+        <p id="hint" class="hint">Biometric keystroke analysis active (15s limit)</p>
+        <p id="result" class="result"></p>
+      </div>
+    </div>
+  </main>
+
+  <div id="homePage" class="home-page" style="display: none;">
+    <div class="terminal-header">
+      <div class="terminal-controls">
+        <span class="control"></span>
+        <span class="control"></span>
+        <span class="control"></span>
+      </div>
+      <div class="terminal-title">Temporal Authentication System - Dashboard</div>
+      <button id="logoutBtn" class="logout-btn" title="Logout">LOGOUT</button>
+    </div>
+    
+    <div class="terminal-body">
+      <div class="access-granted">
+        <h1>ACCESS GRANTED</h1>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
