@@ -1,7 +1,7 @@
 # Temporal Authentication System (TAS)
 
 ## Copyright Notice
-© 2024 PAdmesh. All rights reserved.
+© 2025 Padmesh. All rights reserved.
 
 This software and associated documentation files (the "Software") are protected by copyright law and international treaties. Unauthorized reproduction or distribution of this Software, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.
 
